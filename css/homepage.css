@@ -1,0 +1,293 @@
+
+
+/*/////////////////////////////////////////////////////////*/
+
+/*00000000000000000000000000000*/
+/*------>HOMAPAGE START<------*/
+/*00000000000000000000000000000*/
+
+/*Start header*/
+
+
+.header{
+    background: url(../img/bg.png) no-repeat;
+    height: 850px;
+    
+}
+
+header{
+    
+    height: 133;
+}
+
+.logo{
+    float: left;
+    width: 226px;
+    height: 113px;
+}
+
+.search input, button{
+    font-family: "Rotonda";
+    background: transparent;
+    border: none;
+    display: inline-flex;
+}
+
+
+.search button{
+    float: right;
+}
+
+.search{
+    width: 360px;
+    height: 29px;
+    float: right;
+}
+
+.search input {
+    outline:none;
+}
+
+.search, .logo{
+    justify-content: space-around; 
+    display: inline-block;
+}
+
+.menu{
+font-family: "RotondaBold";
+float: right;
+font-size: 18px;
+margin-top: -50px;
+
+} 
+.menu__link{
+    text-decoration: none;
+    margin: 10px;
+    color: #000000;
+}
+
+.menu_list{
+    display: flex;
+    list-style-type: none;
+}
+
+
+.menu_item:hover, .menu_item:focus, .menu_item:active {
+    opacity: 50%;
+    
+}
+
+.wrapper{
+    max-width: 1115px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title{
+    position: relative;
+    width: 804px;
+    height: 183px;
+    margin: 0 auto;
+    margin-top: 250px;
+    text-align: center;
+}
+
+.but_read{
+    width: 160px;
+    height: 55px;
+    padding: 16px, 31px, 16px, 31px;
+    margin-top: 60px;
+    color: #fff;
+    background-color: #57984C;
+    font-family: 'Roboto';
+}
+.but_read:hover, .but_read:focus, .but_read:active{
+    background-color: #83db74;
+}
+
+.title button:hover {
+    background-color: #67b15a;
+    transition: all 0.3s ease;
+}
+
+.title__text{
+    font-family: 'RotondaBold' ;
+    text-align: center;
+    font-size: 48px;
+    color: #735440;
+    
+}
+
+.line{
+    position: absolute;
+    width: 350px;
+    height: 0px;
+    left: 1165px;
+    top: 20px;
+    border: 1px solid #324950;
+}
+
+
+/*End header*/
+
+
+
+/*Start Middle*/
+.products{
+    background-color: white;
+    padding-top: 48px;
+    height: 190px;
+    font-family: 'Roboto';
+}
+.prod_line{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.products img{
+    width: 60px;
+    height: 60px;
+
+}
+.products p{
+    margin-top: 20px;
+}
+
+.wrapper{
+    max-width: 1115px;
+    width: 100%;
+    margin: 0 auto;
+}
+.vision{
+   
+    background: url("../img/Uni.png") no-repeat;
+    padding-top: 50px;
+    margin-top: 20px;
+
+
+}
+
+.title_vis p{
+    margin-top: 95px;
+    margin-bottom: 0px;
+    font-size: 64px;
+    display: flex;
+    color: black;
+    margin-top: 95px;
+}
+
+.text_vis p{
+    font-size: 20px;
+    
+}
+
+.visimg img {
+    width: 570px;
+    height: 550px;
+}
+
+.activ{
+    height: 640px;
+    background-color: #ededed;
+    margin-top: 100px;
+}
+.activ{
+    font-size: 64px;
+    color: #324950;
+    padding-top: 70px;
+    text-align: center;
+    font-weight: 700;
+}
+.unimg{
+    margin-top: -45px;
+}
+
+.colum{
+    flex: 0 0 33%;
+    font-size: 24px;
+    color: #57984C;
+}
+.colum .exam{
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #324950;
+}
+
+.colum a{
+    color: #57984C;
+
+}
+
+.colum a:hover{
+    text-decoration: none;
+    color:#57984C;
+}
+
+/*End Midlle/
+
+
+/*Start footer*/
+.footer_1 {
+    background-color: #2D3F45;
+    padding-top: 5px;
+}
+
+.footer_2{
+    background: #324950;
+    color: #B9B9B9;
+}
+
+.footer_1 .row {
+    margin-top: 10px;
+}
+
+.footer_item {
+    margin: 0 13px;
+    margin-top: 5px;
+}
+
+.footer_item a {
+    font-family: 'Roboto';
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer_link {
+    margin: 0 13px;
+}
+
+.crosses {
+    padding-top: 20px;
+}
+
+.footer_menu {
+    display: flex;
+    justify-content: center;
+    font-family: 'RotondaBold';
+}
+
+footer {
+    background-color: #324950;
+    color: #B9B9B9;
+    font-family: 'Roboto';
+    font-size: 14px;
+    padding: 10px 0;
+}
+.footer_1 li{
+        list-style-type: none;
+    } 
+
+/*End footer*/
+
+
+
+/*00000000000000000000000000000*/
+/*------>HOMAPAGE END<------*/
+/*00000000000000000000000000000*/
+

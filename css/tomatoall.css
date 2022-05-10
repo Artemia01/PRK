@@ -1,0 +1,225 @@
+
+/*Start header*/
+
+.wrapper{
+    max-width: 1115px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header{
+    background: #FFFFFF;
+}
+
+header{
+    height: 133px;
+}
+
+.logo{
+    float: left;
+    width: 166px;
+    height: 83px;
+}
+
+.search input, button{
+    background: transparent;
+    border: none;
+    display: inline-flex;
+}
+
+
+.search button{
+    float: right;
+}
+
+.search{
+    width: 360px;
+    height: 29px;
+    float: right;
+}
+
+.search input {
+    outline:none;
+}
+
+.search, .logo{
+    justify-content: space-around; 
+    display: inline-block;
+}
+
+.menu{
+    font-family: "RotondaBold";
+    float: right;
+    font-size: 18px;
+    margin-top: -50px;
+    
+    } 
+    .menu__link{
+        text-decoration: none;
+        margin: 10px;
+        color: #000000;
+    }
+    
+    .menu_list{
+        display: flex;
+        list-style-type: none;
+    }
+    
+    
+    .menu_item:hover, .menu_item:focus, .menu_item:active {
+        opacity: 50%;
+        
+    }
+
+.line{
+    position: absolute;
+    width: 350px;
+    height: 0px;
+    left: 1165px;
+    top: 20px;
+    border: 1px solid #324950;
+}
+
+/*End header*/
+
+
+/*Start middle*/
+
+.tomatimg{
+
+    background-position: center;
+}
+
+.title_text{
+    font-family: 'RotondaBold';
+    margin-top: 51px;
+    font-size: 44px;
+    color: #324950;
+}
+
+.title_img{
+    margin-top: 40px;
+}
+
+.main_text{
+    margin-top: 40px;
+    font-size: 17px;
+    color: #324950;
+}
+
+.line2{
+    border-left: 4px solid #EB5757;
+    padding-left: 26px;
+    font-size: 17px;
+}
+
+.activ{
+    height: 450px;
+    width: 1152px;
+    background-color: white;
+    margin: 33px auto 47px auto;
+    font-size: 64px;
+    color: #324950;
+    padding-top: 20px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.colum{
+    flex: 0 0 33%;
+    font-size: 24px;
+    color: #324950;
+
+}
+
+.colum .exam{
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #324950;
+}
+.prodTomat {
+    display: grid;
+    object-fit: contain;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(3, 321px);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    object-fit: contain;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.prodTomat div {
+    text-align: center;
+    background-color: white;
+}
+
+.prodTomat p {
+    height: 50px;
+    z-index: 1;
+}
+
+.prodTomat img {
+    z-index: 1;
+}
+
+.prodTomat a {
+    font-family: 'RotondaBold';
+    color:#57984C;
+    font-size: 15px;
+}
+/*End middle*/
+
+/*Start footer*/
+.footer_1 {
+    background-color: #2D3F45;
+    padding-top: 5px;
+}
+
+.footer_2{
+    background: #324950;
+    color: #B9B9B9;
+}
+
+.footer_1 .row {
+    margin-top: 10px;
+}
+
+.footer_item {
+    margin: 0 13px;
+    margin-top: 5px;
+}
+
+.footer_item a {
+    font-family: 'Roboto';
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer_link {
+    margin: 0 13px;
+}
+
+.crosses {
+    padding-top: 20px;
+}
+
+.footer_menu {
+    display: flex;
+    justify-content: center;
+    font-family: 'RotondaBold';
+}
+
+footer {
+    background-color: #324950;
+    color: #B9B9B9;
+    font-family: 'Roboto';
+    font-size: 14px;
+    padding: 10px 0;
+}
+.footer_1 li{
+        list-style-type: none;
+    } 
+
+/*End footer*/
