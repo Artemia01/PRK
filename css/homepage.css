@@ -11,6 +11,7 @@
 
 .header{
     background: url(../img/bg.png) no-repeat;
+    background-position: center;
     height: 850px;
     
 }
@@ -49,9 +50,11 @@ header{
 }
 
 .search, .logo{
+    
     justify-content: space-around; 
     display: inline-block;
 }
+
 
 .menu{
 font-family: "RotondaBold";
@@ -78,6 +81,7 @@ margin-top: -50px;
 }
 
 .wrapper{
+    
     max-width: 1115px;
     width: 100%;
     margin: 0 auto;
@@ -119,9 +123,9 @@ margin-top: -50px;
 }
 
 .line{
-    position: absolute;
-    width: 350px;
-    height: 0px;
+    position: sticky;
+    min-width: 350px;
+    min-height: 0px;
     left: 1165px;
     top: 20px;
     border: 1px solid #324950;
@@ -166,6 +170,7 @@ margin-top: -50px;
 .vision{
    
     background: url("../img/Uni.png") no-repeat;
+    background-position: center;
     padding-top: 50px;
     margin-top: 20px;
 

@@ -72,9 +72,9 @@ header{
     }
 
 .line{
-    position: absolute;
-    width: 350px;
-    height: 0px;
+    position: sticky;
+    min-width: 350px;
+    min-height: 0px;
     left: 1165px;
     top: 20px;
     border: 1px solid #324950;

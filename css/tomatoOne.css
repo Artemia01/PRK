@@ -73,15 +73,14 @@ header{
         
     }
 
-.line{
-    position: absolute;
-    width: 350px;
-    height: 0px;
-    left: 1165px;
-    top: 20px;
-    border: 1px solid #324950;
-    
-}
+    .line{
+        position: sticky;
+        min-width: 350px;
+        min-height: 0px;
+        left: 1165px;
+        top: 20px;
+        border: 1px solid #324950;
+    }
 
 
 /*End header*/
@@ -91,6 +90,7 @@ header{
 
 .middle {
 background: url("../img/to.png") no-repeat;
+background-position: center;
 height: 1000px;
 
     }
@@ -127,17 +127,23 @@ height: 1000px;
     line-height: 142.7%;
     color: #57984C;
 }
-
+.vishenka_ph{
+    margin-top: 40px;
+    margin-bottom: -75px;
+}
 .Very{
+    
     font-family: 'Roboto Slab';
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
-    line-height: 50%;
+    font-size: 35px;
+    line-height: 100%;
  
-    margin-top: 30px;
-    margin-bottom: 30px;
+    
+    margin-bottom: 60px;
     color: #CF2333;
+  
+    margin-left: 90px;
 }
 
 .text_block{
@@ -176,6 +182,19 @@ height: 1000px;
     height: 55px;
     margin-left: 90px;
 }
+
+.photo_block{
+    display: grid;
+    
+    object-fit: contain;
+    grid-template-columns: repeat(2 , 210px);
+    grid-template-rows: repeat(1, 280px);
+    grid-row-gap: 30px;
+    padding-top: 30px;
+    padding-bottom: 120px;
+}
+
+
 /*End Midlle/
 
 
