@@ -86,8 +86,10 @@ header{
 /*Start middle*/
 
 .tomatimg{
-
-    background-position: center;
+    background: url("../img/TomatoAll.png") no-repeat;
+background-position: center;
+height: 480px;
+    
 }
 
 .title_text{
