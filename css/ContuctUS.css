@@ -1,4 +1,3 @@
-
 /*Start header*/
 
 .wrapper{
@@ -88,113 +87,106 @@ header{
 
 /*Start Middle*/
 
-.middle {
-background: url("../img/to.png") no-repeat;
-background-position: center;
-height: 1000px;
-
-    }
-
-.tomato_img{
-    height: 1000px;
-}
-
-.strelka{
-    font-family: 'Roboto Slab';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 162.7%;
- 
-    color: #57984C;
-
-}
-
-.title_text1{
-    font-family: "RotondaBold";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 200px;
-    line-height: 142.7%;
-    color: #324950;
-}
-
-.title_text2{
-    font-family: "RotondaBold";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 70px;
-    line-height: 142.7%;
-    color: #57984C;
-}
-.vishenka_ph{
-    margin-top: 40px;
-    margin-bottom: -75px;
-}
-.Very{
+.field-banner {
     
+    background: url("../img/image 7.png") no-repeat;
+    background-position: center;
+    height: 480px;
+    margin-top: 0px;
+  }
+
+  .input-label{
+    margin-top: 15px;
+    font-size: large;
     font-family: 'Roboto Slab';
     font-style: normal;
-    font-weight: 700;
-    font-size: 35px;
-    line-height: 100%;
- 
+    font-weight: 400;
+    color: #324950;
+
+  }
+
+
+  .input-box{
+    height: 55px;
+    width: 350px;
+    border-radius: 5px;
+    border-color: white;
+  }
+ /* 2 col*/
+ .input-box-large{
+    height: 430px;
+    width: 635px;
+    border-radius: 5px;
+    border-color: white;
+  }
+
+ .input-box-short{
+    height: 55px;
+    width: 225px;
+    border-radius: 5px;
+    border-color: white;
+    margin-left: 25px;
     
-    margin-bottom: 60px;
-    color: #CF2333;
-  
-    margin-left: 90px;
-}
+    
+  }
 
-.text_block{
-    font-family: 'Roboto Slab';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 142.7%;
-    color: #57984C;
-}
+  .input-box-long{
+    height: 55px;
+    width: 635px;
+    border-radius: 5px;
+    border-color: white;
+  }
 
-.text_spis{
-    font-family: 'Roboto Slab';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 200%;
-    color: #324950;
+  .send-button{
+    height: 55px;
+    width: 255px;
+    padding:15px;
+    padding-left: 75px;
+    border-radius: 15px;
+    color:white;
+    background-color: #57984C;
+    margin-left: 30px;
+    
 
-}
+    
+  }
 
-.text_spisbold{
-    font-family: "RotondaBold";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 200%;
-    color: #324950;
-
-
-}
-
-.text_block2{
-    margin-top: 200px;
-    font-family: 'Roboto Slab';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 142.7%;
-    color: #57984C;
-}
-
-.tomat_ph{
-   margin-left: 200px;
+  .h3 {
+    font-weight: 600;
+    font-size: 32px;
    
-}
-.download{
-    margin-left: 330px;
-   margin-top: 20px;
-}
 
+  }
+  .col-lg-12{
+      margin-left: 30px;
+      font-family: "RotondaBold";
+      font-style: normal;
+      font-weight: 700;
+      color: #324950;
+  }
+
+  .container2{
+    height: 250px;
+    background-color: #ffffff;
+    margin-top: 100px;
+    
+  }
+  .contact-green-underlined{
+      margin-top: 50px;
+  }
+  .contact-green-underlined,  .text-color-green{
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 700;
+    color: #57984C;
+  }
+
+  .text_adress{
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    color: #324950;
+  }
 /*End Midlle/
 
 
