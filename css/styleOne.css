@@ -18,17 +18,11 @@
 
 
 body {
-    font-family: 'RotondaBold'; 
-    background-color: #f7f7f7;
+    /* font-family: 'RotondaBold';  */
+    background-color: #E5E5E5;
 }
 
-h1, h2, h3 {
-    font-family: "RotondaBold";
-}
 
-li{
-    list-style-type: none;
-}
 
 .wrapper{
     max-width: 1115px;

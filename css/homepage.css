@@ -1,23 +1,10 @@
-
-
-/*/////////////////////////////////////////////////////////*/
-
-/*00000000000000000000000000000*/
-/*------>HOMAPAGE START<------*/
-/*00000000000000000000000000000*/
-
 /*Start header*/
-
-
 .header{
-    background: url(../img/bg.png) no-repeat;
-    background-position: center;
+    background: url(../img/bg.png) no-repeat center;
     height: 850px;
-    
 }
 
 header{
-    
     height: 133;
 }
 
@@ -28,10 +15,8 @@ header{
 }
 
 .search input, button{
-    font-family: "Rotonda";
     background: transparent;
     border: none;
-    display: inline-flex;
 }
 
 
@@ -40,7 +25,8 @@ header{
 }
 
 .search{
-    width: 360px;
+    border-bottom: 1px solid black;
+    width: 350px;
     height: 29px;
     float: right;
 }
@@ -50,63 +36,47 @@ header{
 }
 
 .search, .logo{
-    
     justify-content: space-around; 
     display: inline-block;
 }
 
 
-.menu{
-font-family: "RotondaBold";
-float: right;
-font-size: 18px;
-margin-top: -50px;
+.complex_list{
+    display: flex;
+}
 
-} 
-.menu__link{
+.complex_list li a {
     text-decoration: none;
     margin: 10px;
-    color: #000000;
-}
-
-.menu_list{
-    display: flex;
-    list-style-type: none;
-}
-
-
-.menu_item:hover, .menu_item:focus, .menu_item:active {
-    opacity: 50%;
-    
+    color: #324950;
 }
 
 .wrapper{
-    
     max-width: 1115px;
     width: 100%;
     margin: 0 auto;
 }
 
-.title{
-    position: relative;
-    width: 804px;
-    height: 183px;
-    margin: 0 auto;
-    margin-top: 250px;
-    text-align: center;
+
+
+.title {
+    padding: 230px 0 300px 0;
 }
 
 .but_read{
     width: 160px;
     height: 55px;
-    padding: 16px, 31px, 16px, 31px;
     margin-top: 60px;
+    font-size: 16px;
     color: #fff;
+    border: none;
     background-color: #57984C;
     font-family: 'Roboto';
 }
-.but_read:hover, .but_read:focus, .but_read:active{
-    background-color: #83db74;
+
+.but_read{
+
+padding: 20px, 30px;
 }
 
 .title button:hover {
@@ -123,34 +93,135 @@ margin-top: -50px;
 }
 
 .line{
-    position: sticky;
-    min-width: 350px;
-    min-height: 0px;
+    position: absolute;
+    width: 350px;
+    height: 0px;
     left: 1165px;
     top: 20px;
     border: 1px solid #324950;
 }
 
 
+.menu{
+    margin-left: auto;
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+.navbar a{
+    text-decoration: none;
+    color: inherit;
+}
+.logo{
+    margin-right: 50px;
+}
+.list{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+#toggler{
+    visibility: hidden;
+}
+
+
+
+
+.link:hover, .link:focus, .link:active{
+    opacity: 50%;
+}
+
+.dropbtn {
+    
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    visibility:hidden;
+}
+
+
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+
+
+@media screen and 
+(max-width: 790px){
+
+    .logo, .search{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    .search {
+        margin-top: 20px;
+        
+    }
+    .menu{
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .show {
+        display:block;
+        }
+    .dropbtn {
+        visibility:visible;
+    }
+}
+
 /*End header*/
 
-
-
-/*Start Middle*/
+/*Start middle*/
 .products{
-    background-color: white;
-    padding-top: 48px;
-    height: 190px;
-    font-family: 'Roboto';
-}
-.prod_line{
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    vertical-align: middle;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    background-color: #ffffff;
 }
 
 .products img{
@@ -169,21 +240,16 @@ margin-top: -50px;
 }
 .vision{
    
-    background: url("../img/Uni.png") no-repeat;
-    background-position: center;
+    background: url("../img/Uni.png") no-repeat center;
     padding-top: 50px;
     margin-top: 20px;
-
-
 }
 
 .title_vis p{
     margin-top: 95px;
     margin-bottom: 0px;
     font-size: 64px;
-    display: flex;
     color: black;
-    margin-top: 95px;
 }
 
 .text_vis p{
@@ -196,37 +262,38 @@ margin-top: -50px;
     height: 550px;
 }
 
+
+
+
 .activ{
-    height: 640px;
+    min-height: 640px;
     background-color: #ededed;
     margin-top: 100px;
 }
-.activ{
+
+.title_text2{
     font-size: 64px;
     color: #324950;
     padding-top: 70px;
-    text-align: center;
     font-weight: 700;
 }
-.unimg{
-    margin-top: -45px;
-}
 
-.colum{
-    flex: 0 0 33%;
+.colum h2{
     font-size: 24px;
     color: #57984C;
 }
+
 .colum .exam{
-    margin-top: 10px;
     font-size: 18px;
     font-weight: 400;
     color: #324950;
 }
 
+
+
+
 .colum a{
     color: #57984C;
-
 }
 
 .colum a:hover{
@@ -234,10 +301,38 @@ margin-top: -50px;
     color:#57984C;
 }
 
-/*End Midlle/
 
+
+@media (max-width: 990px){
+    .vision{
+        padding: 20px;
+    }
+    .Vision, .Mission{
+        text-align: center;
+    }
+    .title_vis p{
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 560px){
+    .visimg img{
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+/*End middle*/
 
 /*Start footer*/
+footer {
+    background-color: #324950;
+    color: #B9B9B9;
+    font-family: 'Roboto';
+    font-size: 14px;
+    padding: 10px 0;
+}
+
 .footer_1 {
     background-color: #2D3F45;
     padding-top: 5px;
@@ -277,22 +372,28 @@ margin-top: -50px;
     font-family: 'RotondaBold';
 }
 
-footer {
-    background-color: #324950;
-    color: #B9B9B9;
-    font-family: 'Roboto';
-    font-size: 14px;
-    padding: 10px 0;
-}
+
 .footer_1 li{
         list-style-type: none;
-    } 
+} 
+
+
+@media (max-width: 1060px){
+    .footer_link {
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 990px){
+    .footer_link{
+        margin-bottom: 5px;
+    }
+    .footer_menu{
+        margin-left: -20px;
+        display: block;
+        text-align: center;
+    }
+}
+
 
 /*End footer*/
-
-
-
-/*00000000000000000000000000000*/
-/*------>HOMAPAGE END<------*/
-/*00000000000000000000000000000*/
-
