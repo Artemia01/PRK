@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "RotondaBold";
+    src: url("../fonts/RotondaBold.svg#RotondaBlod") format("svg"),
+         url("../fonts/RotondaBold.ttf") format("truetype"),
+         url("../fonts/RotondaBold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.svg#Roboto-Regular') format('svg'), 
+        url('../fonts/Roboto-Regular.woff') format('woff'),
+        url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    background-color: #f9fdbc;
+}
+
+li{
+    list-style-type: none;
+}
+
+.wrapper{
+    max-width: 1115px;
+    width: 100%;
+    margin: 0 auto;
+}
+
