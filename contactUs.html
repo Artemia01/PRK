@@ -11,6 +11,10 @@
         <title>ContactUs</title>
     </head>
 <body>
+
+     <!-- Vue JS  -->
+     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
     <header class="header">
         <div class="wrapper">
             <div class="row">
@@ -61,7 +65,7 @@
                 <div id="myDropdown" class="dropdown-content">
                   <a href="index.html">Home</a>
                   <a href="#">Company Profile</a>
-                  <a href="tomatoAll.html">Products</a>
+                  <a href="Lemon.html">Products</a>
                   <a href="#">Services</a>
                   <a href="#">R & D</a>
                   <a href="contactus.html">Contact</a>
@@ -94,74 +98,279 @@
 <section class="photo">
     <div></div>
 </section>
+    <div id="app">
+        <section class="body">
+            <div class="wrapper">
+                <div class="text_title">
+                    <h1>Contact us</h1>
+                    <img src="./img/Union.png" alt="xxx" class="xxx">
+                </div>
+                 <!-- Cart  -->
+              <table class="table" v-if="cart1[0] && fieldsVisible">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Icon</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col" class="text-center">Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="product in cart1" :key="product.title">
+                    <th>
+                      <img
+                        :src="'img/lemon/'+product.image"
+                        class="img-fluid"
+                        alt=""
+                        width="100"
+                      />
+                    </th>
+                    <td>{{product.title}}</td>
+                    <td>{{product.short_text}}</td>
+                    <td
+                      class="text-center"
+                      @click.prevent="removeFromCart(product.id)"
+                    >
+                      <a onClick="window.location.reload();" href="">❌</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End Cart -->
 
-<section class="body">
-    <div class="wrapper">
-        <div class="text_title">
-            <h1>Contact us</h1>
-            <img src="./img/Union.png" alt="xxx" class="xxx">
-        </div>
-        <div class="row">
-            <div class="col-lg-5">
-                
-                <div>
-                    <p class="text_p">Name</p>
-                    <input type="text" name="name" class="input_p">
-                </div>
-                <div>
-                    <p class="text_p">Company Name</p>
-                    <input type="text" name="Company_Name" class="input_p">
-                </div>
-                <div>
-                    <p class="text_p">Position</p>
-                    <input type="text" name="Position" class="input_p">
-                </div>
-                <div>
-                    <p class="text_p">City</p>
-                    <input type="text" name="City" class="input_p">
-                </div>
-                <div>
-                    <p class="text_p">Country</p>
-                    <input type="text" name="Country" class="input_p">
-                </div>
-                <div>
-                    <p class="text_p">Telephone</p>
-                    <input type="tel" name="Telephone"  class="input_p">
-                </div>
-                <div>
-                    <p class="text_p">Email</p>
-                    <input type="email" name="Email"  class="input_p">
-                </div>
-            </div>
-            <div class="col-lg-7">
-                <div>
-                    <p class="text_p">You are a</p>
-                    <input list="form_list" class="data_p">
-                    <datalist id="form_list">
-                        <option value="seed producer"></option>
-                    </datalist>
-                </div>
-                <div>
-                    <p class="text_p">If other, please specify</p>
-                    <input type="text" name="Other" class="data_p">
-                </div>
-                <div>
-                    <p class="text_p">You are interested in</p>
-                    <textarea type ="text" name="interested" class="text_area" ></textarea>
-                </div>
-                <div>
-                    <p class="text_p">Please type this code</p>
+
+              <!--<form v-on:submit.prevent="makeOrder()" v-if="fieldsVisible"></form>
                     <div class="row">
-                        <div class="send_mes col-lg-2"><img src="./img/qrcode.svg" alt=""></div>
-                        <div class="send_mes col-lg-5"><input type="text"></div>
-                        <div class="send_mes col-lg-5"><button><img src="./img/button.png" alt=""></button></div>
-                        
+                        <div class="col-lg-5">
+                            
+                            <div>
+                                <p class="text_p">Name</p>
+                                <input
+                                type="text" 
+                                name="name" 
+                                class="input_p"
+                                required
+                                v-model="contactFields.name">
+                            </div>
+                            <div>
+                                <p class="text_p">Company Name</p>
+                                <input type="text" name="Company_Name" class="input_p" v-model="contactFields.company">
+                            </div>
+                            <div>
+                                <p class="text_p">Position</p>
+                                <input type="text" name="Position" class="input_p" v-model="contactFields.position">
+                            </div>
+                            <div>
+                                <p class="text_p">City</p>
+                                <input type="text" name="City" class="input_p" v-model="contactFields.city">
+                            </div>
+                            <div>
+                                <p class="text_p">Country</p>
+                                <input type="text" name="Country" class="input_p" v-model="contactFields.country">
+                            </div>
+                            <div>
+                                <p class="text_p">Telephone</p>
+                                <input type="tel" name="Telephone"  class="input_p" v-model="contactFields.telephone">
+                            </div>
+                            <div>
+                                <p class="text_p">Email</p>
+                                <input type="email" name="Email"  class="input_p" required v-model="contactFields.email">
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div>
+                                <p class="text_p">You are a</p>
+                                <input list="form_list" class="data_p" v-model="contactFields.a">
+                                <datalist id="form_list">
+                                    <option value="seed producer"></option>
+                                </datalist>
+                            </div>
+                            <div>
+                                <p class="text_p">If other, please specify</p>
+                                <input type="text" name="Other" class="data_p" v-model="contactFields.specify">
+                            </div>
+                            <div>
+                                <p class="text_p">You are interested in</p>
+                                <textarea type ="text" name="interested" class="text_area" v-model="contactFields.specify"></textarea>
+                            </div>
+                            <div>
+                                <p class="text_p">Please type this code</p>
+                                <div class="row">
+                                    <div class="send_mes col-lg-2"><img src="./img/qrcode.svg" alt=""></div>
+                                    <div class="send_mes col-lg-5"><input type="text"></div>
+                                    <div class="send_mes col-lg-5"><input type="submit" value="Send Message"/>  
+                                        
+                                </div>
+
+                                <p class="text_p">Please type this code</p>
+                                <div class="row">
+                                    <div class="send_mes col-lg-2"><img src="./img/qrcode.svg" alt=""></div>
+                                    <div class="send_mes col-lg-5"><input type="text"></div>
+                                    <div class="send_mes col-lg-5"><button><img src="./img/button.png" alt=""></button></div>
+                                    
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </form>
+                <div v-if="!fieldsVisible">
+                    <div class="container">
+                        <div class="row">
+                                <div class="col-lg-8">
+                                <h2>Form successfully sumbited!</h2>
+                                <p class="text_p">
+                                    <strong>Name:</strong> {{contactFields.name}}
+                                </p>
+                                <p class="text_p">
+                                    <strong>Company Name:</strong> {{contactFields.company}}
+                                </p>
+                                <p class="text_p">
+                                    <strong>Position:</strong> {{contactFields.position}}
+                                </p>
+                                <p class="text_p">
+                                    <strong>City:</strong> {{contactFields.city}}
+                                </p>
+                                <p class="text_p">
+                                    <strong>Country:</strong> {{contactFields.country}}
+                                </p>
+                                <p class="text_p">
+                                    <strong>Telephone:</strong> {{contactFields.telephone}}
+                                </p>
+                                <p class="text_p">
+                                    <strong>Email:</strong> {{contactFields.email}}
+                                </p>
+                                <p class="text_p">
+                                    <strong>If other, please specify:</strong>
+                                    {{contactFields.specify}}
+                                </p>
+                                <p class="text_p">
+                                    <strong>You are interested in:</strong>
+                                    {{contactFields.interested}}
+                                </p>
+                                </div>
+                        </div>
+                    </div>
+                </div>  -->
+                
+                    <!-- Contact Us Section -->
+    
+                <form v-on:submit.prevent="makeOrder()" v-if="fieldsVisible">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                        <div class="col-lg-5">
+                        <p id="input-label">Name*</p>
+                        <input
+                            id="input-box"
+                            type="text"
+                            required
+                            v-model="contactFields.name"
+                        />
+                        <p id="input-label">Company Name</p>
+                        <input
+                            id="input-box"
+                            type="text"
+                            v-model="contactFields.company"
+                        />
+                        <p id="input-label">Position</p>
+                        <input
+                            id="input-box"
+                            type="text"
+                            v-model="contactFields.position"
+                        />
+                        <p id="input-label">City</p>
+                        <input
+                            id="input-box"
+                            type="text"
+                            v-model="contactFields.city"
+                        />
+                        <p id="input-label">Country</p>
+                        <input
+                            id="input-box"
+                            type="text"
+                            v-model="contactFields.country"
+                        />
+                        <p id="input-label">Telephone</p>
+                        <input
+                            id="input-box"
+                            type="text"
+                            v-model="contactFields.telephone"
+                        />
+                        <p id="input-label">Email*</p>
+                        <input
+                            id="input-box"
+                            type="text"
+                            required
+                            v-model="contactFields.email"
+                        />
+                        </div>
+                        <div class="col-lg-7">
+                        <p id="input-label">If other, please specify</p>
+                        <input
+                            id="input-box-long"
+                            type="text"
+                            v-model="contactFields.specify"
+                        />
+                        <p id="input-label">You are interested in</p>
+                        <textarea
+                            id="input-box-large"
+                            v-model="contactFields.interested"
+                        ></textarea>
+                        <p id="input-label">Please type this code</p>
+                        <div>
+                            <image src="img/qrcode.svg" />
+                            <input id="input-box-short" type="text" />
+                            <input id="send-button" type="submit" value="Send Message" />
+                        </div>
+                        </div>
+                        </div>
+                    
+                    </div>
+                    </form>
+                        <div v-if="!fieldsVisible">
+                        <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                            <h2>Form successfully sumbited!</h2>
+                            <p id="input-label">
+                                <strong>Name:</strong> {{contactFields.name}}
+                            </p>
+                            <p id="input-label">
+                                <strong>Company Name:</strong> {{contactFields.company}}
+                            </p>
+                            <p id="input-label">
+                                <strong>Position:</strong> {{contactFields.position}}
+                            </p>
+                            <p id="input-label">
+                                <strong>City:</strong> {{contactFields.city}}
+                            </p>
+                            <p id="input-label">
+                                <strong>Country:</strong> {{contactFields.country}}
+                            </p>
+                            <p id="input-label">
+                                <strong>Telephone:</strong> {{contactFields.telephone}}
+                            </p>
+                            <p id="input-label">
+                                <strong>Email:</strong> {{contactFields.email}}
+                            </p>
+                            <p id="input-label">
+                                <strong>If other, please specify:</strong>
+                                {{contactFields.specify}}
+                            </p>
+                            <p id="input-label">
+                                <strong>You are interested in:</strong>
+                                {{contactFields.interested}}
+                            </p>
+                            </div>
+                        </div>
+                    </div>   
                 </div>
+          </div>
+        </section>
+        
+      </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+    </div>   
 
     <section class="bot_but">
         <div class="wrapper">
@@ -233,6 +442,10 @@
             </div>
     </div>
 </footer>
+
+
+<!--  Main JS File -->
+<script src="js/main.js"></script>
 
 </body>
 </html>

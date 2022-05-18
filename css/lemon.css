@@ -285,7 +285,15 @@ hr{
 
 .lemon h4{
     font-weight: 600;
+   
    }
+#margin-vertical-20 h4{
+    color:#EB5757
+}
+
+#margin-vertical-20 h4:hover, #margin-vertical-20 h4:focus, #margin-vertical-20 h4:active{
+    opacity: 50%;
+}
 
 
 

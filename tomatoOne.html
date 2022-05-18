@@ -11,6 +11,10 @@
         <title>TomatoAll</title>
     </head>
 <body>
+
+     <!-- Vue JS  -->
+     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script> 
+
     <header class="header">
         <div class="wrapper">
             <div class="row">
@@ -61,7 +65,7 @@
                 <div id="myDropdown" class="dropdown-content">
                   <a href="index.html">Home</a>
                   <a href="#">Company Profile</a>
-                  <a href="tomatoAll.html">Products</a>
+                  <a href="Lemon.html">Products</a>
                   <a href="#">Services</a>
                   <a href="#">R & D</a>
                   <a href="contactus.html">Contact</a>
@@ -95,7 +99,7 @@
         <div class="wrapper">
             <div class="return">
                 <div class="row">
-                    <a href="tomatoAll.html">
+                    <a href="Lemon.html">
                         <img src="./img/Arrow.png" alt="">
                         Return to all tomatoes
                     </a>
@@ -104,76 +108,99 @@
         </div>
     </section>
 
-    <section class="middle">
-        <div class="wrapper">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="title_text">
-                        <h1>TAG 1002 (TAG 809)</h1>
-                        <h2>Tomato Determinate <br>Red Standard Round</h2>
-                    </div>
-                        <div class="xxx">
-                            <img src="./img/Union.png" alt="xxx">
+    <div id="app">
+        <section class="middle">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="title_text">
+                            <h1>{{product.title}}</h1>
+                            <h2>{{product.short_text}}</h2>
                         </div>
-                    <div class="row">
-                        <img src="./img/fruit.svg" alt="" class="high_img">
-                        <b class="high_text">Very high yield and<br> excellent fruits quality!</b>
-                    </div>
-                    <div class="text_block">
-                            <h3>CHARACTERISTICS</h3>
+                            <div class="xxx">
+                                <img src="./img/Union.png" alt="xxx">
+                            </div>
+                        <div class="row">
+                            <img src="./img/fruit.svg" alt="" class="high_img">
+                            <b class="high_text">Very high yield and<br> excellent fruits quality!</b>
+                        </div>
+                        <div class="text_block">
+                                <h3>CHARACTERISTICS</h3>
+                                <img src="./img/Line2.png" alt=""><br>
+                                <b>Resistance</b>
+                                <p>HR: ToMV:0-2; Fol: 1,2; Ve/Vd; <br>IR: TYLCV</p>
+                        </div>
+                        <div class="text_block">
+                            <h3>Plant</h3>
                             <img src="./img/Line2.png" alt=""><br>
-                            <b>Resistance</b>
-                            <p>HR: ToMV:0-2; Fol: 1,2; Ve/Vd; <br>IR: TYLCV</p>
+                            <ul>
+                                <li>Strong vigor that provides good leaf coverage.</li>
+                                <li>Very high productivity with good fruit setting.</li>
+                                <li>Early matured variety.</li>
+                            </ul>
+                        </div>
+                        <div class="text_block">
+                            <h3>Fruit</h3>
+                            <img src="./img/Line2.png" alt=""><br>
+                            <ul>
+                                <li>Long shelf life on plant and post harvest.</li>
+                                <li>Nice shiny attractive deep red color.</li>
+                                <li>Average fruit size: 140 – 160 grams.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="text_block">
-                        <h3>Plant</h3>
-                        <img src="./img/Line2.png" alt=""><br>
-                        <ul>
-                            <li>Strong vigor that provides good leaf coverage.</li>
-                            <li>Very high productivity with good fruit setting.</li>
-                            <li>Early matured variety.</li>
-                        </ul>
+                    <div class="col-lg-6">
+                        <div class="tomatoimg">
+                            <img
+                                :src="'img/lemon/'+product.image"
+                                 class="img-fluid"
+                                />
+                        </div>
+
+                        <div class="download">
+                            
+                            <a
+                                href="#"
+                                @click.prevent="addToCart(product.id)"
+                                v-if="!btnVisible"
+                            >
+                            <img
+                                src="img/add-to-cart-button.jpg"
+                                alt=""
+                                height="100"
+                            />
+                            <a v-if="btnVisible" href="contactUs.html">
+                                <img
+                                  src="img/view-cart-button.jpg"
+                                  alt=""
+                                  height="100"
+                                />
+                              </a>
+
+                        </div>
+                        <div class="text_block">
+                            <h3>Cycle</h3>
+                            <img src="img/Line2.png" alt=""><br>
+                            <ul>
+                                <li>Spring</li>
+                                <li>Fall</li>
+                                <li>Winter</li>
+                            </ul>
+                        </div>
+                        <div class="text_block">
+                            <h3>Color</h3>
+                            <img src="./img/Line2.png" alt=""><br>
+                            <ul>
+                                <li>red</li>
+                            </ul>
+                        </div>
+                        
                     </div>
-                    <div class="text_block">
-                        <h3>Fruit</h3>
-                        <img src="./img/Line2.png" alt=""><br>
-                        <ul>
-                            <li>Long shelf life on plant and post harvest.</li>
-                            <li>Nice shiny attractive deep red color.</li>
-                            <li>Average fruit size: 140 – 160 grams.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="tomatoimg">
-                        <img src="./img/tog1003.png" alt="">
-                    </div>
-                    <div class="download">
-                        <button><img src="./img/download.png" alt=""></button>
-                    </div>
-                    <div class="text_block">
-                        <h3>Cycle</h3>
-                        <img src="./img/Line2.png" alt=""><br>
-                        <ul>
-                            <li>Spring</li>
-                            <li>Fall</li>
-                            <li>Winter</li>
-                        </ul>
-                    </div>
-                    <div class="text_block">
-                        <h3>Color</h3>
-                        <img src="./img/Line2.png" alt=""><br>
-                        <ul>
-                            <li>red</li>
-                        </ul>
-                    </div>
-                    
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
     
-
+    </div>
 
 
 
@@ -237,7 +264,7 @@
                     </div>
                 </div>
         </div>
-</section>
+    </section>
 <footer class="footer_2">
     <div class="wrapper">
             <div class="col d-flex justify-content-center">
@@ -245,6 +272,9 @@
             </div>
     </div>
 </footer>
+
+<!--  Main JS File -->
+<script src="js/main.js"></script>
 
 </body>
 </html>

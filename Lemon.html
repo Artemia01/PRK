@@ -153,23 +153,7 @@
     <div class="wrapper">
         <p class="line2"> Agridera operates through international and local distributers around the world. </p>
     </div>
-   <!-- <div id="app">
-        <div class="lemonList col-md-12">
-            <div class="row">
-                <div class="lemonItem col-md-4" v-if="products" v-for="p in products">
-                        <div class="col-md-12">
-                            <div class="lemonImg">
-                                <img :src="'../img/lemon/' +p.image " alt="">
-                            </div>
-                        <div class="lemonInfo">
-                            <b style = "font-size:20px; line-height: 28px;">{{p.title}}</b>
-                            <br>
-                            {{p.short_text}}
-                        </div>  
-                    </div>
-                </div>
-        </div>
-    </div>-->
+
 
     <div id="app">
         <div class="container">
@@ -180,14 +164,16 @@
               v-for="product in products"
               :key="product.title"
             >
+            <a :href="'tomatoOne.html#' + product.id">
               <img
-                :src="'../img/lemon/'+product.image"
+                :src="'img/lemon/'+product.image"
                 class="img-fluid"
                 alt=""
               />
               <h4 id="margin-vertical-20" class="text-center">
                 {{product.title}}
               </h4>
+            </a>
               <h5 class="text-center">{{product.short_text}}</h5>
             </div>
           </div>

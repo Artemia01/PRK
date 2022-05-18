@@ -281,7 +281,16 @@ header{
     font-size: 17px;
 }
 
-.input_p{
+
+
+#input-box-long{
+    width: 635px;
+    height: 55px;
+    background: #FFFFFF;
+    border: 1px solid #DADADA;
+    border-radius: 10px;
+}
+#input-box{
     width: 350px;
     height: 55px;
     background: #FFFFFF;
@@ -289,15 +298,7 @@ header{
     border-radius: 10px;
 }
 
-.data_p{
-    width: 635px;
-    height: 55px;
-    background: #FFFFFF;
-    border: 1px solid #DADADA;
-    border-radius: 10px;
-}
-
-.text_area{
+#input-box-large{
     width: 633.9px;
     height: 390.75px;
     background: #FFFFFF;
@@ -305,23 +306,30 @@ header{
     border-radius: 10px;
 }
 
-.send_mes{
-    display: flex;
-    justify-content: space-between;
-}
 
-.send_mes button{
-    outline: none;
-}
 
-.send_mes input{
-    margin-left: 100px;
-    width: 170px;
-    height: 55px;
-    background: #FFFFFF;
-    border: 1px solid #DADADA;
-    border-radius: 10px;
-}
+#input-box-short{
+    height: 40px;
+    width: 150px;
+    border-radius: 5px;
+    border-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  #send-button{
+    padding:10px;
+    border-radius: 15px;
+    color:white;
+    background-color: #57984C;
+    margin-top:15px;
+    margin-bottom:15px;
+    border-width: 0px;
+    
+  }
+
+
+
 
 .bot_but{
     margin-top: 50px;
@@ -381,6 +389,7 @@ header{
 
 
 
+
 @media screen and 
 (max-width: 790px){
     .menu{
@@ -402,14 +411,18 @@ header{
         padding: 10px;
     }
 
-    .send_mes input{
-        margin-left: 1px;
-        width: 170px;
+    #input-box-long{
+        width: 400px;
         height: 55px;
         background: #FFFFFF;
         border: 1px solid #DADADA;
         border-radius: 10px;
     }
+    #input-box-large{
+        width: 400px;
+    }
+
+   
 }
 
 @media (max-width: 590px){
@@ -422,6 +435,67 @@ header{
     .text_area, .data_p{
         width: 100%;
     }
+    #input-box-long{
+        width: 400px;
+        height: 55px;
+        background: #FFFFFF;
+        border: 1px solid #DADADA;
+        border-radius: 10px;
+    }
+    #input-box-large{
+        width: 400px;
+    }
+
+
+}
+@media (max-width: 475px){
+    .logo, .search{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    .text_area, .data_p{
+        width: 100%;
+    }
+    #input-box-long{
+        width: 350px;
+        height: 55px;
+        background: #FFFFFF;
+        border: 1px solid #DADADA;
+        border-radius: 10px;
+    }
+    #input-box-large{
+        width: 350px;
+    }
+
+
+}
+
+@media (max-width: 320px){
+    .logo, .search{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    .text_area, .data_p{
+        width: 100%;
+    }
+    #input-box-long{
+        width: 300px;
+        height: 55px;
+        background: #FFFFFF;
+        border: 1px solid #DADADA;
+        border-radius: 10px;
+    }
+    #input-box-large{
+        width: 300px;
+    }
+    #input-box{
+        width: 300px; 
+    }
+
 
 }
 
@@ -449,6 +523,19 @@ header{
 }
 
 
+#about h3 {
+    font-weight: 600;
+    font-size: 32px;
+  }
+  
+  #input-label{
+    margin-top: 15px;
+    font-size: large;
+  }
+
+  .col-lg-4{
+      margin-left: auto;
+  }
 
 
 /*Start footer*/
